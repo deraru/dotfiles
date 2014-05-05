@@ -1,0 +1,19 @@
+[user]
+	name = Rui Onodera
+	email = deraru@gmail.com
+[alias]
+	co = checkout
+	st = status --untracked-files=all --short --branch
+	l = log --graph --decorate --oneline
+	dif = diff --color-words
+	b = branch -a
+[push]
+[core]
+	editor = vim
+	attributesfile = ~/.gitattributes_global
+	excludesfile = ~/.gitignore_global
+	pager = lv -c
+[color]
+	ui = auto
+[push]
+	default = simple
