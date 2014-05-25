@@ -1,8 +1,16 @@
-# prompt
-PROMPT="[%n@%m %~]$ "
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
 
-# shortcut
-alias ll="ls -l"
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
 
 # vim
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
