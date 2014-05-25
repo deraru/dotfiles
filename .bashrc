@@ -16,4 +16,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # MySQL
-export PATH=$PATH:/usr/local/mysql/bin
+export PATH="/usr/local/mysql/bin:$PATH"
