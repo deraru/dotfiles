@@ -6,6 +6,9 @@ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# hub command
+eval "$(hub alias -s)"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
