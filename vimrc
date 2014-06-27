@@ -24,6 +24,16 @@ NeoBundleLazy 'Shougo/neocomplete.vim', {
     \   'insert': 1,
     \ }}
 
+" HTML, CSS, JavaScript
+NeoBundleLazy 'othree/html5.vim', {'autoload':{'filetypes':['html']}}
+NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html']}}
+NeoBundleLazy 'pangloss/vim-javascript', {'autoload':{'filetypes':['javascript']}}
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript']}}
+
+" AngularJS
+NeoBundleLazy 'burnettk/vim-angular', {'autoload':{'filetypes':['javascript']}}
+
 " Ruby
 NeoBundle 'tpope/vim-rails.git'
 NeoBundle 'vim-ruby/vim-ruby'
@@ -282,3 +292,8 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 if !exists('g:neocomplete#sources#omni#input_patterns')
     let g:neocomplete#sources#omni#input_patterns = {}
 endif
+
+" Tab spaces
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
