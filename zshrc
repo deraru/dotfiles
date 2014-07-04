@@ -29,3 +29,9 @@ export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # MySQL
 export PATH="/usr/local/mysql/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+source "${ZDOTDIR:-$HOME}/google-cloud-sdk/path.zsh.inc"
+
+# The next line enables zsh completion for gcloud.
+source "${ZDOTDIR:-$HOME}/google-cloud-sdk/completion.zsh.inc"
