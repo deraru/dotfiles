@@ -37,6 +37,7 @@ NeoBundleLazy 'burnettk/vim-angular', {'autoload':{'filetypes':['javascript']}}
 " Ruby
 NeoBundle 'tpope/vim-rails.git'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'slim-template/vim-slim.git'
 
 " Python
 NeoBundle 'nvie/vim-flake8'
