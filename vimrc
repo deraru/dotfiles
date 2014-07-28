@@ -42,6 +42,9 @@ NeoBundle 'slim-template/vim-slim.git'
 " Python
 NeoBundle 'nvie/vim-flake8'
 
+" Coffee Script
+NeoBundle 'kchmck/vim-coffee-script'
+
 filetype plugin indent on " ファイルタイプ自動検出有効、ファイルタイプ変更時のファイルタイププラグイン自動読み込み有効、ファイルタイプ変更時のインデント設定自動読み込み有効
 
 NeoBundleCheck
@@ -281,6 +284,7 @@ endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
 autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
@@ -298,3 +302,4 @@ endif
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
