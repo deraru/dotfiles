@@ -35,3 +35,6 @@ source "${ZDOTDIR:-$HOME}/google-cloud-sdk/path.zsh.inc"
 
 # The next line enables zsh completion for gcloud.
 source "${ZDOTDIR:-$HOME}/google-cloud-sdk/completion.zsh.inc"
+
+# Applications Alias
+alias chrome="open -a Google\ Chrome"
