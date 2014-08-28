@@ -64,6 +64,9 @@ set nowritebackup
 set nobackup
 set noswapfile
 
+" Undoファイルの保存先
+set undodir=~/var/vim/undo
+
 " 検索系
 set ignorecase "小文字で検索時に大文字小文字を区別しない
 set smartcase "大文字を含む検索時に大文字小文字を区別する
