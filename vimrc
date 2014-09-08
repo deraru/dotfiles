@@ -200,7 +200,7 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 
 " indentguide設定
 let g:indent_guides_auto_colors = 0 " デフォルトの色を無効
-hi IndentGuidesOdd ctermbg=lightgrey
+hi IndentGuidesOdd ctermbg=grey
 hi IndentGuidesEven ctermbg=darkgrey
 let g:indent_guides_enable_on_vim_startup = 1 " 起動時に有効
 let g:indent_guides_start_level = 2 " 2つ目のインデントから有効
