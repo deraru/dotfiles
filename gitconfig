@@ -9,6 +9,8 @@
     b = branch -a
 [diff]
     tool = vimdiff
+[merge]
+    tool = vimdiff
 [core]
     editor = vim
     attributesfile = ~/.gitattributes_global
