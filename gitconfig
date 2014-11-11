@@ -1,20 +1,20 @@
 [user]
-	name = Rui Onodera
-	email = deraru@gmail.com
+    name = Rui Onodera
+    email = deraru@gmail.com
 [alias]
-	co = checkout
-	st = status --untracked-files=all --short --branch
-	l = log --graph --decorate --oneline
-	dif = diff --color-words
-	b = branch -a
+    co = checkout
+    st = status --untracked-files=all --short --branch
+    l = log --graph --decorate --oneline
+    dif = diff --color-words
+    b = branch -a
 [diff]
     tool = vimdiff
 [core]
-	editor = vim
-	attributesfile = ~/.gitattributes_global
-	excludesfile = ~/.gitignore_global
-	pager = lv -c
+    editor = vim
+    attributesfile = ~/.gitattributes_global
+    excludesfile = ~/.gitignore_global
+    pager = lv -c
 [color]
-	ui = auto
+    ui = auto
 [push]
-	default = simple
+    default = simple
