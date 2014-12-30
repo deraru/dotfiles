@@ -22,3 +22,5 @@
     default = simple
 [hub]
     protocol = https
+[credential]
+    helper = osxkeychain
