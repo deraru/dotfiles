@@ -31,6 +31,9 @@ NeoBundleLazy 'pangloss/vim-javascript', {'autoload':{'filetypes':['javascript']
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript']}}
 
+" TypeScript
+NeoBundleLazy 'leafgarland/typescript-vim', { 'autoload': { 'filetypes': ['typescript'] } }
+
 " AngularJS
 NeoBundleLazy 'burnettk/vim-angular', {'autoload':{'filetypes':['javascript']}}
 
