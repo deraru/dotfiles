@@ -6,6 +6,15 @@ endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
 
 NeoBundle 'vim-scripts/wombat256.vim'
 
@@ -33,6 +42,7 @@ NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes'
 
 " TypeScript
 NeoBundleLazy 'leafgarland/typescript-vim', { 'autoload': { 'filetypes': ['typescript'] } }
+NeoBundleLazy 'Quramy/tsuquyomi', { 'autoload': { 'filetypes': ['typescript'] } }
 
 " AngularJS
 NeoBundleLazy 'burnettk/vim-angular', {'autoload':{'filetypes':['javascript']}}
