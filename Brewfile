@@ -14,6 +14,7 @@ cask install google-cloud-sdk
 cask install google-drive
 cask install google-japanese-ime
 cask install google-web-designer
+cask install heroku-toolbelt
 cask install hockey
 cask install java
 cask install kindle
