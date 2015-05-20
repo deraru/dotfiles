@@ -18,6 +18,11 @@ alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 # rbenv
 eval "$(rbenv init -)"
 
+# ndenv
+export NDENV_ROOT="/usr/local/Cellar/ndenv/0.4.0"
+export PATH="$NDENV_ROOT/bin:$PATH"
+if which ndenv > /dev/null; then eval "$(ndenv init -)"; fi
+
 # hub command
 eval "$(hub alias -s)"
 
