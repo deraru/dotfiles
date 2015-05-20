@@ -1,0 +1,32 @@
+install caskroom/cask/brew-cask
+
+cask install adobe-reader
+cask install alfred
+cask install atom
+cask install clamxav
+cask install evernote
+cask install dropbox
+cask install firefox
+cask install fluid
+cask install googleappengine
+cask install google-chrome
+cask install google-cloud-sdk
+cask install google-drive
+cask install google-japanese-ime
+cask install google-web-designer
+cask install hockey
+cask install java
+cask install kindle
+cask install libreoffice
+cask install licecap
+cask install opera
+cask install postgres
+cask install remote-desktop-connection
+cask install RStudio
+cask install silverlight
+cask install skype
+cask install slack
+cask install vagrant
+cask install virtualbox
+cask install visual-studio-code
+cask install xquartz
