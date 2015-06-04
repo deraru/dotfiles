@@ -30,7 +30,7 @@ eval "$(hub alias -s)"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Postgres
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
 # MySQL
 export PATH="/usr/local/mysql/bin:$PATH"
