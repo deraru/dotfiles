@@ -15,6 +15,8 @@ fi
 # vim
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
+# pyenv
+eval "$(pyenv init -)"
 # rbenv
 eval "$(rbenv init -)"
 
@@ -30,16 +32,13 @@ eval "$(hub alias -s)"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Postgres
-export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
-
-# MySQL
-export PATH="/usr/local/mysql/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-source "${ZDOTDIR:-$HOME}/google-cloud-sdk/path.zsh.inc"
+source "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 
 # The next line enables zsh completion for gcloud.
-source "${ZDOTDIR:-$HOME}/google-cloud-sdk/completion.zsh.inc"
+source "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # Applications Alias
 alias chrome="open -a Google\ Chrome"
