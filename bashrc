@@ -2,8 +2,9 @@
 alias ll='ls -l'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
-#rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
+# pyenv
+eval "$(pyenv init -)"
+# rbenv
 eval "$(rbenv init -)"
 
 # hub command
@@ -13,7 +14,10 @@ eval "$(hub alias -s)"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Postgres
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
-# MySQL
-export PATH="/usr/local/mysql/bin:$PATH"
+# The next line updates PATH for the Google Cloud SDK.
+source "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+
+# The next line enables bash completion for gcloud.
+source "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
