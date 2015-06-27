@@ -1,33 +1,47 @@
-install caskroom/cask/brew-cask
+brew 'hub'
+brew 'lv'
+brew 'fontforge'
 
-cask install adobe-reader
-cask install alfred
-cask install atom
-cask install clamxav
-cask install evernote
-cask install dropbox
-cask install firefox
-cask install fluid
-cask install googleappengine
-cask install google-chrome
-cask install google-cloud-sdk
-cask install google-drive
-cask install google-japanese-ime
-cask install google-web-designer
-cask install heroku-toolbelt
-cask install hockey
-cask install java
-cask install kindle
-cask install libreoffice
-cask install licecap
-cask install opera
-cask install postgres
-cask install remote-desktop-connection
-cask install RStudio
-cask install silverlight
-cask install skype
-cask install slack
-cask install vagrant
-cask install virtualbox
-cask install visual-studio-code
-cask install xquartz
+brew 'lua'
+brew 'pyenv'
+brew 'rbenv'
+brew 'ruby-build'
+
+brew 'memcached'
+brew 'mysql'
+brew 'phantomjs'
+brew 'redis'
+brew 'wget'
+
+tap 'caskroom/cask'
+
+cask 'adobe-reader'
+cask 'atom'
+cask 'evernote'
+cask 'dropbox'
+cask 'firefox'
+cask 'fluid'
+cask 'googleappengine'
+cask 'google-chrome'
+cask 'google-cloud-sdk'
+cask 'google-drive'
+cask 'google-japanese-ime'
+cask 'google-web-designer'
+cask 'heroku-toolbelt'
+cask 'hockey'
+cask 'iterm2'
+cask 'java'
+cask 'libreoffice'
+cask 'licecap'
+cask 'postgres'
+cask 'rstudio'
+cask 'silverlight'
+cask 'skype'
+cask 'vagrant'
+cask 'virtualbox'
+cask 'visual-studio-code'
+cask 'xquartz'
+
+tap 'caskroom/fonts'
+
+cask 'font-inconsolata-dz-for-powerline'
