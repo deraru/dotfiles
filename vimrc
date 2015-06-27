@@ -1,11 +1,16 @@
+if 0 | endif
+
 if has('vim_starting')
-    set nocompatible
+    if &compatible
+        set nocompatible
+    endif
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
+
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \     'windows' : 'tools\\update-dll-mingw',
@@ -58,6 +63,8 @@ NeoBundle 'nvie/vim-flake8'
 
 " Coffee Script
 NeoBundle 'kchmck/vim-coffee-script'
+
+call neobundle#end()
 
 filetype plugin indent on " ファイルタイプ自動検出有効、ファイルタイプ変更時のファイルタイププラグイン自動読み込み有効、ファイルタイプ変更時のインデント設定自動読み込み有効
 
