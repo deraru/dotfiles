@@ -12,6 +12,7 @@ brew 'mysql'
 brew 'phantomjs'
 brew 'redis'
 brew 'wget'
+brew 'qt'
 
 tap 'caskroom/cask'
 
