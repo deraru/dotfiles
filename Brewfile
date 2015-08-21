@@ -8,6 +8,7 @@ brew 'nodenv'
 brew 'rbenv'
 brew 'ruby-build'
 
+brew 'imagemagick'
 brew 'memcached'
 brew 'mysql'
 brew 'phantomjs'
