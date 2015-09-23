@@ -38,8 +38,9 @@ alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 eval "$(pyenv init -)"
 # rbenv
 eval "$(rbenv init -)"
-# nodenv
-eval "$(nodenv init -)"
+# nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # hub command
 eval "$(hub alias -s)"
