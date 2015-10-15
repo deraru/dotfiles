@@ -45,6 +45,9 @@ source $(brew --prefix nvm)/nvm.sh
 # hub command
 eval "$(hub alias -s)"
 
+# Locale
+export LC_CTYPE="ja_JP.UTF-8"
+
 # heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
