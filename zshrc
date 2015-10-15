@@ -42,6 +42,9 @@ eval "$(rbenv init -)"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+# direnv
+eval "$(direnv hook zsh)"
+
 # hub command
 eval "$(hub alias -s)"
 
