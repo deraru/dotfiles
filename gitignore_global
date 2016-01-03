@@ -52,3 +52,6 @@ DerivedData
 *.hmap
 *.ipa
 /Pods
+
+# ctags
+tags

@@ -9,6 +9,7 @@ brew 'rbenv'
 brew 'ruby-build'
 
 brew 'awscli'
+brew 'ctags'
 brew 'direnv'
 brew 'flow'
 brew 'ffmpeg'
