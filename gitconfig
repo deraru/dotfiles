@@ -3,6 +3,7 @@
     email = deraru@gmail.com
 [alias]
     co = checkout
+    pp = pull --prune
     st = status --untracked-files=all --short --branch
     l = log --graph --decorate --oneline
     dif = diff --color-words
