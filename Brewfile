@@ -9,6 +9,7 @@ brew 'rbenv'
 brew 'ruby-build'
 
 brew 'awscli'
+brew 'awsebcli'
 brew 'ctags'
 brew 'direnv'
 brew 'flow'
