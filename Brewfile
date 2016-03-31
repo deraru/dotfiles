@@ -1,10 +1,12 @@
+brew 'openssl'
+
 brew 'hub'
 brew 'lv'
 brew 'fontforge'
 
 brew 'lua'
-brew 'pyenv'
 brew 'nvm'
+brew 'pyenv'
 brew 'rbenv'
 brew 'ruby-build'
 
