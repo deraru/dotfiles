@@ -2,8 +2,6 @@
 alias ll='ls -l'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
-# pyenv
-eval "$(pyenv init -)"
 # rbenv
 eval "$(rbenv init -)"
 

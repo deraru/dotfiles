@@ -6,7 +6,6 @@ brew 'fontforge'
 
 brew 'lua'
 brew 'nvm'
-brew 'pyenv'
 brew 'rbenv'
 brew 'ruby-build'
 

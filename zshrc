@@ -37,8 +37,6 @@ alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
-# pyenv
-eval "$(pyenv init -)"
 # rbenv
 eval "$(rbenv init -)"
 # nvm
