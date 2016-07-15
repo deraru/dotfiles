@@ -37,6 +37,9 @@ alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
+# go
+export GOPATH=$HOME/.go
+
 # rbenv
 eval "$(rbenv init -)"
 # nvm
