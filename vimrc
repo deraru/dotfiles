@@ -1,4 +1,8 @@
+" Skip initialization for vim-tiny or vim-small
 if 0 | endif
+
+set encoding=utf-8
+scriptencoding utf-8
 
 if has('vim_starting')
     if &compatible
@@ -77,9 +81,9 @@ set background=light
 syntax on "カラー強調
 
 " エンコーディング
-set encoding=utf-8
-set fileencodings=utf-8
-set fileformats=unix,dos,mac
+set fileencoding=utf-8 "保存時の文字コード
+set fileencodings=ucs-bom,utf-8 "文字コード自動判別
+set fileformats=unix,dos,mac "改行コードの自動判別
 
 " バックアップ系を無効
 set nowritebackup
@@ -123,8 +127,10 @@ set textwidth=0 "自動改行の挿入を無効
 
 " カーソル系
 set scrolloff=5 "カーソル上下の行数
+set whichwrap=b,s,h,l,<,>,[,],~ "行末から次の行頭へ移動
 
 set wildmenu "コマンドライン補完が拡張モードで行われる
+set history=5000 "保存するコマンド履歴数
 set hidden "編集中の内容を保ったまま別の画面に切替えられるようにする
 set visualbell t_vb= " エラー時にビープ音を出さない
 
