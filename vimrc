@@ -31,11 +31,14 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'tacahiroy/ctrlp-funky'
+NeoBundle 'suy/vim-ctrlp-commandline'
 
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/Align'
-NeoBundle 'vim-scripts/YankRing.vim'
+NeoBundle 'LeafCage/yankround.vim'
 
 NeoBundleLazy 'Shougo/neocomplete.vim', {
     \ 'autoload': {
@@ -127,7 +130,6 @@ set textwidth=0 "自動改行の挿入を無効
 
 " カーソル系
 set scrolloff=5 "カーソル上下の行数
-set whichwrap=b,s,h,l,<,>,[,],~ "行末から次の行頭へ移動
 
 set wildmenu "コマンドライン補完が拡張モードで行われる
 set history=5000 "保存するコマンド履歴数
@@ -204,6 +206,17 @@ endfunction
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><BS> neocomplete#smart_close_popup() . "\<C-h>"
 inoremap <expr><C-e> neocomplete#cancel_popup()
+
+" yankround.vimキーマップ
+nmap p <Plug>(yankround-p)
+xmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap gp <Plug>(yankround-gp)
+xmap gp <Plug>(yankround-gp)
+nmap gP <Plug>(yankround-gP)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
+
 
 " vvで行末まで選択
 vnoremap v $h
