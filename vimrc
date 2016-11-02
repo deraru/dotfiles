@@ -39,6 +39,7 @@ NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/Align'
 NeoBundle 'LeafCage/yankround.vim'
+NeoBundle 'rking/ag.vim'
 
 NeoBundleLazy 'Shougo/neocomplete.vim', {
     \ 'autoload': {
@@ -217,7 +218,6 @@ nmap gP <Plug>(yankround-gP)
 nmap <C-p> <Plug>(yankround-prev)
 nmap <C-n> <Plug>(yankround-next)
 
-
 " vvで行末まで選択
 vnoremap v $h
 
@@ -338,3 +338,9 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 if !exists('g:neocomplete#sources#omni#input_patterns')
     let g:neocomplete#sources#omni#input_patterns = {}
 endif
+
+" ag.vimの設定 検索高速化
+if executable('ag')
+    let g:ctrlp_use_caching=0
+    let g:ctrlp_user_command='ag %s -i --hidden -g ""'
+endif"
