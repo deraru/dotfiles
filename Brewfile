@@ -4,6 +4,7 @@ brew 'hub'
 brew 'lv'
 brew 'fontforge'
 
+brew 'cmake'
 brew 'lua'
 brew 'nvm'
 brew 'go'
