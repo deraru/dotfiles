@@ -25,6 +25,8 @@ capybara-*.html
 /vendor/bundle
 /log/*
 /tmp/*
+!/log/.keep
+!/tmp/.keep
 /db/*.sqlite3
 /public/system/*
 /coverage/
