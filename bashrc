@@ -5,6 +5,9 @@ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 # rbenv
 eval "$(rbenv init -)"
 
+# yarn
+export PATH="$PATH:`yarn global bin`"
+
 # hub command
 eval "$(hub alias -s)"
 

@@ -46,6 +46,9 @@ eval "$(rbenv init -)"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+# yarn
+export PATH="$PATH:`yarn global bin`"
+
 # direnv
 eval "$(direnv hook zsh)"
 

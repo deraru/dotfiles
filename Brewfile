@@ -10,6 +10,7 @@ brew 'nvm'
 brew 'go'
 brew 'rbenv'
 brew 'ruby-build'
+brew 'yarn'
 
 brew 'awscli'
 brew 'awsebcli'
