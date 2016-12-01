@@ -19,6 +19,7 @@ brew 'direnv'
 brew 'flow'
 brew 'ffmpeg'
 brew 'imagemagick'
+brew 'mas'
 brew 'memcached'
 brew 'mysql'
 brew 'packer'
@@ -30,6 +31,13 @@ brew 'the_silver_searcher'
 brew 'wget'
 brew 'watchman'
 brew 'qt'
+
+mas 'Alfred',   id: 405843582
+mas 'Keynote',  id: 409183694
+mas 'Opera',    id: 404764921
+mas 'Slack',    id: 803453959
+mas 'Twitter',  id: 409789998
+mas 'Xcode',    id: 497799835
 
 tap 'caskroom/cask'
 
