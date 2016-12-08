@@ -1,4 +1,5 @@
 brew 'openssl'
+brew 'readline'
 
 brew 'hub'
 brew 'lv'
