@@ -2,12 +2,17 @@
     name = Rui Onodera
     email = deraru@gmail.com
 [alias]
-    co = checkout
-    pp = pull --prune
-    st = status --untracked-files=all --short --branch
-    l = log --graph --decorate --oneline
+    a   = add
+    b   = branch -a
+    co  = checkout
+    com = checkout master
+    cm  = commit -m
     dif = diff --color-words
-    b = branch -a
+    l   = log --graph --decorate --oneline
+    pp  = pull --prune
+    pr  = pull-request
+    rh  = reset HEAD
+    st  = status --untracked-files=all --short --branch
 [diff]
     tool = vimdiff
 [merge]
