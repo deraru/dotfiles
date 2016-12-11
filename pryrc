@@ -5,14 +5,16 @@ Pry.config.history.file = '~/.irb_history'
 Pry.config.editor = 'vim'
 
 # Awesomeprint
-begin
-  require 'awesome_print'
-  require 'awesome_print/ext/active_record'
-  require 'awesome_print/ext/active_support'
-  AwesomePrint.defaults = {
-    indent: 2
-  }
-  AwesomePrint.pry!
+if defined?(AwesomePrint)
+  begin
+    require 'awesome_print'
+    require 'awesome_print/ext/active_record'
+    require 'awesome_print/ext/active_support'
+    AwesomePrint.defaults = {
+      indent: 2
+    }
+    AwesomePrint.pry!
+  end
 end
 
 # For Rails
