@@ -31,9 +31,6 @@ bindkey "^n" history-beginning-search-forward-end
 bindkey "^r" history-incremental-search-backward
 bindkey "^s" history-incremental-search-forward
 
-# vim
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
@@ -49,9 +46,6 @@ source $(brew --prefix nvm)/nvm.sh
 # yarn
 export PATH="$PATH:`yarn global bin`"
 
-# direnv
-eval "$(direnv hook zsh)"
-
 # hub command
 eval "$(hub alias -s)"
 
@@ -62,13 +56,13 @@ export LC_CTYPE="ja_JP.UTF-8"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Postgres
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-source "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 
 # The next line enables zsh completion for gcloud.
-source "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # Applications Alias
 alias chrome="open -a Google\ Chrome"
