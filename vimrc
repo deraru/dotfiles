@@ -95,6 +95,7 @@ set nobackup
 set noswapfile
 
 " Undoファイルの保存先
+set undofile
 set undodir=~/var/vim/undo
 
 " 検索系
