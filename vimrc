@@ -132,6 +132,7 @@ set textwidth=0 "自動改行の挿入を無効
 " カーソル系
 set scrolloff=5 "カーソル上下の行数
 
+set backspace=indent,eol,start
 set wildmenu "コマンドライン補完が拡張モードで行われる
 set history=5000 "保存するコマンド履歴数
 set hidden "編集中の内容を保ったまま別の画面に切替えられるようにする
