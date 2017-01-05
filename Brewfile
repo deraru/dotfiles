@@ -30,7 +30,7 @@ brew 'redis'
 brew 'terminal-notifier'
 brew 'terraform'
 brew 'the_silver_searcher'
-brew 'vim'
+brew 'vim', args: ['with-lua']
 brew 'wget'
 brew 'watchman'
 
