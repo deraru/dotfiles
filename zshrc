@@ -52,6 +52,9 @@ eval "$(hub alias -s)"
 # Locale
 export LC_CTYPE="ja_JP.UTF-8"
 
+# Android SDK
+export PATH="/Users/rui/Library/Android/sdk/platform-tools:$PATH"
+
 # heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 

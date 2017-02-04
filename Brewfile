@@ -47,6 +47,7 @@ mas 'Xcode',      id: 497799835
 tap 'caskroom/cask'
 
 cask 'adobe-reader'
+cask 'android-studio'
 cask 'atom'
 cask 'evernote'
 cask 'docker'
