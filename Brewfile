@@ -15,6 +15,7 @@ brew 'ctags'
 brew 'ffmpeg'
 brew 'flow'
 brew 'fontforge'
+brew 'fswatch'
 brew 'heroku'
 brew 'hub'
 brew 'imagemagick'
@@ -43,6 +44,9 @@ mas 'Pixelmator', id: 407963104
 mas 'Slack',      id: 803453959
 mas 'Twitter',    id: 409789998
 mas 'Xcode',      id: 497799835
+
+tap 'homebrew/dupes'
+brew 'rsync'
 
 tap 'caskroom/cask'
 
