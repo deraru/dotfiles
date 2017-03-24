@@ -73,6 +73,9 @@ NeoBundle 'nvie/vim-flake8'
 " Coffee Script
 NeoBundle 'kchmck/vim-coffee-script'
 
+" Terraform
+NeoBundle 'vim-scripts/vim-terraform'
+
 call neobundle#end()
 
 filetype plugin indent on " ファイルタイプ自動検出有効、ファイルタイプ変更時のファイルタイププラグイン自動読み込み有効、ファイルタイプ変更時のインデント設定自動読み込み有効
