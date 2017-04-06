@@ -2,6 +2,8 @@ brew 'openssl'
 brew 'readline'
 
 brew 'cmake'
+brew 'gradle'
+
 brew 'elixir-build'
 brew 'erlang'
 brew 'exenv'
