@@ -56,6 +56,8 @@ brew 'rsync'
 tap 'caskroom/cask'
 
 cask 'adobe-reader'
+cask 'android-platform-tools'
+cask 'android-sdk'
 cask 'android-studio'
 cask 'atom'
 cask 'evernote'
