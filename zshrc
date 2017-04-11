@@ -35,12 +35,13 @@ bindkey "^s" history-incremental-search-forward
 alias ctags="`brew --prefix`/bin/ctags"
 
 # go
-export GOPATH=$HOME/.go
+export GOPATH="$HOME/.go"
 
 # rbenv
 eval "$(rbenv init -)"
+
 # nvm
-export NVM_DIR=~/.nvm
+export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
 # yarn
@@ -53,13 +54,15 @@ eval "$(hub alias -s)"
 export LC_CTYPE="ja_JP.UTF-8"
 
 # Android SDK
-export PATH="/Users/rui/Library/Android/sdk/platform-tools:$PATH"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 # heroku toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$PATH:/usr/local/heroku/bin"
 
 # Postgres
-export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 # The next line updates PATH for the Google Cloud SDK.
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
