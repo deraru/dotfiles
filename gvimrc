@@ -1,1 +1,1 @@
-colorscheme wombat "カラースキーマ
+colorscheme wombat256mod "カラースキーマ
