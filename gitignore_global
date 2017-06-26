@@ -36,7 +36,11 @@ rerun.txt
 pickle-email-*.html
 
 # Xcode
+## Build generated
 build/
+DerivedData/
+
+## Various settings
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -45,15 +49,12 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
-*.xccheckout
-profile
+xcuserdata/
+
+## Other
 *.moved-aside
-DerivedData
-.idea/
-*.hmap
-*.ipa
-/Pods
+*.xccheckout
+*.xcscmblueprint
 
 # ctags
 /tags
