@@ -61,14 +61,17 @@ NeoBundleLazy 'Quramy/tsuquyomi', { 'autoload': { 'filetypes': ['typescript'] } 
 NeoBundleLazy 'burnettk/vim-angular', {'autoload':{'filetypes':['javascript']}}
 
 " Ruby
-NeoBundle 'tpope/vim-rails.git'
-NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'tpope/vim-endwise.git'
+NeoBundle 'tpope/vim-rails.git'
 NeoBundle 'slim-template/vim-slim.git'
+NeoBundle 'vim-scripts/dbext.vim'
+NeoBundle 'tpope/vim-endwise.git'
 
 " Python
 NeoBundle 'nvie/vim-flake8'
+
+" Elixir
+NeoBundle 'elixir-lang/vim-elixir'
 
 " Coffee Script
 NeoBundle 'kchmck/vim-coffee-script'
