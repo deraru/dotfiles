@@ -240,9 +240,6 @@ map <silent> [Tag]x :tabclose<CR>
 map <silent> [Tag]n :tabnext<CR>
 map <silent> [Tag]p :tabprevious<CR>
 
-" NERDTreeを自動で起動
-autocmd VimEnter * NERDTree
-
 " \nでNERDTreeを開閉
 nnoremap <Leader>n :NERDTreeToggle<CR>
 
