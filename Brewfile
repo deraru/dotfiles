@@ -39,6 +39,7 @@ brew 'terminal-notifier'
 brew 'terraform'
 brew 'the_silver_searcher'
 brew 'tig'
+brew 'tree'
 brew 'unison'
 brew 'vim', args: ['with-lua']
 brew 'wget'
