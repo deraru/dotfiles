@@ -48,6 +48,7 @@ brew 'watchman'
 
 mas 'Alfred',     id: 405843582
 mas 'feedly',     id: 865500966
+mas 'Fotor',      id: 503039729
 mas 'Keynote',    id: 409183694
 mas 'OneNote',    id: 784801555
 mas 'Opera',      id: 404764921
