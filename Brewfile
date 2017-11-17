@@ -49,9 +49,6 @@ mas 'Slack',      id: 803453959
 mas 'Twitter',    id: 409789998
 mas 'Xcode',      id: 497799835
 
-tap 'homebrew/dupes'
-brew 'rsync'
-
 tap 'caskroom/cask'
 
 cask 'adobe-reader'
@@ -83,8 +80,6 @@ cask 'postgres'
 cask 'rstudio'
 cask 'silverlight'
 cask 'skype'
-cask 'vagrant'
-cask 'vagrant-manager'
 cask 'virtualbox'
 cask 'visual-studio-code'
 cask 'xamarin-studio'
