@@ -26,7 +26,7 @@ if dein#load_state('~/.vim/bundles')
     call dein#add('tpope/vim-endwise.git') " 自動でendとかつけてくれる。使う
     call dein#add('gabesoft/vim-ags') " :Ags で検索。使う
     call dein#add('LeafCage/yankround.vim') " コピペの履歴たどれる。使う
-    call dein#add('ctrlpvim/ctrlp.vim') " 
+    call dein#add('ctrlpvim/ctrlp.vim') " ファイル検索。使う
     call dein#add('vim-scripts/Align') " :Align でテキスト整形。あまり使わない
 
     " HTML, CSS. JavaScript
