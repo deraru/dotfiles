@@ -40,10 +40,6 @@ export GOPATH="$HOME/.go"
 # rbenv
 eval "$(rbenv init -)"
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
-
 # yarn
 export PATH="$PATH:`yarn global bin`"
 

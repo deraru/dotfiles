@@ -32,7 +32,7 @@ brew 'the_silver_searcher'
 brew 'tig'
 brew 'tree'
 brew 'unison'
-brew 'vim', args: ['with-lua']
+brew 'vim', args: ['with-lua', 'with-python3']
 brew 'wget'
 brew 'watchman'
 
@@ -70,7 +70,3 @@ cask 'postgres'
 cask 'skype'
 cask 'visual-studio-code'
 cask 'xquartz'
-
-tap 'caskroom/fonts'
-
-cask 'font-inconsolata-dz-for-powerline'
