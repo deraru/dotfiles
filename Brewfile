@@ -70,3 +70,7 @@ cask 'postgres'
 cask 'skype'
 cask 'visual-studio-code'
 cask 'xquartz'
+
+tap 'caskroom/fonts'
+
+cask 'font-inconsolata-dz-for-powerline'
