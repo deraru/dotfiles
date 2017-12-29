@@ -8,87 +8,61 @@ if has('vim_starting')
     if &compatible
         set nocompatible
     endif
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+    set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim/
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+if dein#load_state('~/.vim/bundles')
+    call dein#begin('~/.vim/bundles')
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+    call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
 
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
+    call dein#add('vim-scripts/wombat256.vim') " カラースキーマ
+    call dein#add('itchyny/lightline.vim') " Statusline表示
+    call dein#add('Yggdroot/indentLine') " インデント可視化
+    call dein#add('Shougo/vimproc.vim', {'build' : 'make'}) " コマンドの非同期実行。使われてる
+    call dein#add('tpope/vim-fugitive') " :G~ でGitコマンド。使われてる
+    call dein#add('tpope/vim-surround') " テキストを選んで S~ で括弧とかつけてくれる。使う
+    call dein#add('Raimondi/delimitMate') " 自動で閉じ括弧とかつけてくれる。使う
+    call dein#add('tpope/vim-endwise.git') " 自動でendとかつけてくれる。使う
+    call dein#add('gabesoft/vim-ags') " :Ags で検索。使う
+    call dein#add('LeafCage/yankround.vim') " コピペの履歴たどれる。使う
+    call dein#add('ctrlpvim/ctrlp.vim') " 
+    call dein#add('vim-scripts/Align') " :Align でテキスト整形。あまり使わない
 
-NeoBundle 'vim-scripts/wombat256.vim'
+    " HTML, CSS. JavaScript
+    call dein#add('othree/html5.vim')
+    call dein#add('mattn/emmet-vim')
+    call dein#add('pangloss/vim-javascript')
+    call dein#add('jelera/vim-javascript-syntax')
+    call dein#add('othree/javascript-libraries-syntax.vim')
 
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'tacahiroy/ctrlp-funky'
-NeoBundle 'suy/vim-ctrlp-commandline'
+    " Ruby, Rails
+    call dein#add('vim-ruby/vim-ruby')
+    call dein#add('tpope/vim-rails.git')
+    call dein#add('slim-template/vim-slim.git')
+    call dein#add('vim-scripts/dbext.vim')
 
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'vim-scripts/Align'
-NeoBundle 'LeafCage/yankround.vim'
-NeoBundle 'rking/ag.vim'
+    " Elixir
+    call dein#add('elixir-lang/vim-elixir')
 
-NeoBundleLazy 'Shougo/neocomplete.vim', {
-    \ 'autoload': {
-    \   'insert': 1,
-    \ }}
+    " Terraform
+    call dein#add('vim-scripts/vim-terraform')
 
-" HTML, CSS, JavaScript
-NeoBundleLazy 'othree/html5.vim', {'autoload':{'filetypes':['html']}}
-NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html']}}
-NeoBundleLazy 'pangloss/vim-javascript', {'autoload':{'filetypes':['javascript']}}
-NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
-NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript']}}
-
-" TypeScript
-NeoBundleLazy 'leafgarland/typescript-vim', { 'autoload': { 'filetypes': ['typescript'] } }
-NeoBundleLazy 'Quramy/tsuquyomi', { 'autoload': { 'filetypes': ['typescript'] } }
-
-" AngularJS
-NeoBundleLazy 'burnettk/vim-angular', {'autoload':{'filetypes':['javascript']}}
-
-" Ruby
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'tpope/vim-rails.git'
-NeoBundle 'slim-template/vim-slim.git'
-NeoBundle 'vim-scripts/dbext.vim'
-NeoBundle 'tpope/vim-endwise.git'
-
-" Python
-NeoBundle 'nvie/vim-flake8'
-
-" Elixir
-NeoBundle 'elixir-lang/vim-elixir'
-
-" Coffee Script
-NeoBundle 'kchmck/vim-coffee-script'
-
-" Terraform
-NeoBundle 'vim-scripts/vim-terraform'
-
-call neobundle#end()
+    call dein#end()
+    call dein#save_state()
+endif
 
 filetype plugin indent on " ファイルタイプ自動検出有効、ファイルタイプ変更時のファイルタイププラグイン自動読み込み有効、ファイルタイプ変更時のインデント設定自動読み込み有効
+syntax enable "カラー強調
 
-NeoBundleCheck
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
 
-" カラースキーマ
+" 色の設定
 colorscheme wombat256mod
-set background=light
-syntax on "カラー強調
+set background=dark
 
 " エンコーディング
 set fileencoding=utf-8 "保存時の文字コード
@@ -205,17 +179,6 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 
-" neocompleteキーマップ
-inoremap <expr><C-g> neocomplete#undo_completion()
-inoremap <expr><C-c> neocomplete#complete_common_string()
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-    return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-endfunction
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><BS> neocomplete#smart_close_popup() . "\<C-h>"
-inoremap <expr><C-e> neocomplete#cancel_popup()
-
 " yankround.vimキーマップ
 nmap p <Plug>(yankround-p)
 xmap p <Plug>(yankround-p)
@@ -240,69 +203,20 @@ map <silent> [Tag]x :tabclose<CR>
 map <silent> [Tag]n :tabnext<CR>
 map <silent> [Tag]p :tabprevious<CR>
 
-" \nでNERDTreeを開閉
-nnoremap <Leader>n :NERDTreeToggle<CR>
-
-" indentguide設定
-let g:indent_guides_auto_colors = 0 " デフォルトの色を無効
-hi IndentGuidesOdd ctermbg=grey
-hi IndentGuidesEven ctermbg=darkgrey
-let g:indent_guides_enable_on_vim_startup = 1 " 起動時に有効
-let g:indent_guides_start_level = 2 " 2つ目のインデントから有効
-let g:indent_guides_guide_size = 1 " 幅
+" Space sでCtrlPを起動
+nnoremap <Space>s :CtrlP<CR>
 
 " lightline設定
 let g:lightline = {
     \ 'colorscheme' : 'wombat',
     \ 'active' : {
     \   'left' : [ [ 'mode', 'paste' ],
-    \           [ 'fugitive', 'filename' ] ]
+    \           [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
     \ },
     \ 'component_function' : {
-    \   'fugitive' : 'MyFugitive',
-    \   'readonly' : 'MyReadonly',
-    \   'modified' : 'MyModified',
-    \   'filename' : 'MyFilename'
-    \ },
-    \ 'separator': { 'left': '⮀', 'right': '⮂' },
-    \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+    \   'gitbranch' : 'fugitive#head'
     \ }
-
-function! MyFugitive()
-    if exists("*fugitive#head")
-        let _ = fugitive#head()
-        return strlen(_) ? '⭠ '._ : ''
-    endif
-    return ''
-endfunction
-
-function! MyReadonly()
-    if &filetype == "help"
-        return ""
-    elseif &readonly
-        return "⭤"
-    else
-        return ""
-    endif
-endfunction
-
-function! MyModified()
-    if &filetype == "help"
-        return ""
-    elseif &modified
-        return "+"
-    elseif &modifiable
-        return ""
-    else
-        return ""
-    endif
-endfunction
-
-function! MyFilename()
-    return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-        \   ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
-        \   ('' != MyModified() ? ' ' . MyModified() : '')
-endfunction
+    \ }
 
 " 存在しないディレクトリの自動作成
 augroup vimrc-auto-mkdir
@@ -316,38 +230,7 @@ augroup vimrc-auto-mkdir
   endfunction
 augroup END
 
-" neocomplete設定
-let g:neocomplete#enable_at_startup = 1 " neocompleteを自動起動
-let g:neocomplete#force_overwrite_completefunc = 1 " vim-railsのバグによる
-let g:neocomplete#enable_smart_case = 1 "大文字を含む検索時に大文字小文字を区別する
-let g:neocomplete#sources#syntax#min_keyword_length = 3 " 3文字目から補完
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default': '',
-    \ 'vimshell': $HOME.'/.vimshell_hist',
-    \ 'scheme': $HOME.'/.gosh_completions'
-    \ }
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType coffee setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-
-if !exists('g:neocomplete#sources#omni#input_patterns')
-    let g:neocomplete#sources#omni#input_patterns = {}
-endif
-
-" ag.vimの設定 検索高速化
-if executable('ag')
-    let g:ctrlp_use_caching=0
-    let g:ctrlp_user_command='ag %s -i --hidden -g ""'
-endif"
-
-colorscheme wombat256mod "カラースキーマ
+" ctrlp設定
+let g:ctrlp_use_caching=0
+let g:ctrlp_user_command='ag %s -i --nogroup --nocolor -g ""'
+let g:ctrlp_map = '<nop>'
