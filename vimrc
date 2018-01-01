@@ -27,6 +27,7 @@ if dein#load_state('~/.vim/bundles')
     call dein#add('gabesoft/vim-ags') " :Ags で検索。使う
     call dein#add('LeafCage/yankround.vim') " コピペの履歴たどれる。使う
     call dein#add('ctrlpvim/ctrlp.vim') " ファイル検索。使う
+    call dein#add('scrooloose/nerdtree') " エクスプローラ。使う
     call dein#add('vim-scripts/Align') " :Align でテキスト整形。あまり使わない
 
     " HTML, CSS. JavaScript
@@ -202,6 +203,9 @@ map <silent> [Tag]c :tablast <bar> tabnew<CR>
 map <silent> [Tag]x :tabclose<CR>
 map <silent> [Tag]n :tabnext<CR>
 map <silent> [Tag]p :tabprevious<CR>
+
+" \nでNERD Treeを開閉
+nnoremap <Leader>n :NERDTreeToggle<CR>
 
 " Space sでCtrlPを起動
 nnoremap <Space>s :CtrlP<CR>
