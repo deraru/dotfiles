@@ -15,6 +15,10 @@ Icon
 *.swp
 *.un~
 
+# Intellij project files
+*.iml
+.idea/
+
 # Rails
 *.rbc
 *.sassc
