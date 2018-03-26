@@ -6,6 +6,7 @@
     b   = branch -a
     co  = checkout
     com = checkout master
+    cod = checkout develop
     cm  = commit -m
     dif = diff --color-words
     l   = log --graph --decorate --oneline
