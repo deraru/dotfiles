@@ -9,7 +9,7 @@
     cod = checkout develop
     cm  = commit -m
     dif = diff --color-words
-    l   = log --graph --decorate --oneline
+    l   = log --graph --decorate --date=iso --pretty='%ad%C(auto) %h%d %Cgreen%an%Creset %s'
     pp  = pull --prune
     pr  = pull-request
     rh  = reset HEAD
