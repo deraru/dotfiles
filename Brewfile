@@ -49,6 +49,7 @@ mas 'Xcode',      id: 497799835
 tap 'caskroom/cask'
 
 cask 'android-platform-tools'
+cask 'android-ndk'
 cask 'android-sdk'
 cask 'android-studio'
 cask 'atom'
