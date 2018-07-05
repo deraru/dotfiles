@@ -44,6 +44,7 @@ mas 'OneNote',    id: 784801555
 mas 'Opera',      id: 404764921
 mas 'Pixelmator', id: 407963104
 mas 'Slack',      id: 803453959
+mas 'WeChat',     id: 836500024
 mas 'Xcode',      id: 497799835
 
 tap 'caskroom/cask'
