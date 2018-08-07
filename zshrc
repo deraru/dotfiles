@@ -36,6 +36,7 @@ alias ctags="`brew --prefix`/bin/ctags"
 
 # go
 export GOPATH="$HOME/.go"
+export PATH="$GOPATH/bin":$PATH
 
 # rbenv
 eval "$(rbenv init -)"
