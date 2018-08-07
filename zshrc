@@ -58,6 +58,9 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools"
 # heroku toolbelt
 export PATH="$PATH:/usr/local/heroku/bin"
 
+# kubernetes
+export KUBECONFIG="$HOME/.kube/config:$HOME/.kube/config-kyc"
+
 # Postgres
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
