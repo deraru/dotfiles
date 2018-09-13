@@ -46,6 +46,9 @@ if dein#load_state('~/.vim/bundles')
     " Elixir
     call dein#add('elixir-lang/vim-elixir')
 
+    " Go
+    call dein#add('fatih/vim-go')
+
     " Terraform
     call dein#add('vim-scripts/vim-terraform')
 
