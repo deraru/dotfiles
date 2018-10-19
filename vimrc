@@ -36,6 +36,8 @@ if dein#load_state('~/.vim/bundles')
     call dein#add('pangloss/vim-javascript')
     call dein#add('jelera/vim-javascript-syntax')
     call dein#add('othree/javascript-libraries-syntax.vim')
+    " TypeScript
+    call dein#add('leafgarland/typescript-vim')
 
     " Ruby, Rails
     call dein#add('vim-ruby/vim-ruby')
