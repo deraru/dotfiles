@@ -35,7 +35,7 @@ bindkey "^s" history-incremental-search-forward
 alias ctags="`brew --prefix`/bin/ctags"
 
 # go
-export GOPATH="$HOME/.go"
+export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin":$PATH
 
 # rbenv
