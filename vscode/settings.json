@@ -1,7 +1,32 @@
 {
+  "editor.tabSize": 4,
+  "editor.wordWrap": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "breadcrumbs.enabled": true,
+  "files.trimTrailingWhitespace": true,
+
   "[json]": {
     "editor.tabSize": 2,
   },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false,
+  },
+
+  // プラグイン
+  "vim.camelCaseMotion.enable": true, // \w等で区切り移動
+  "vim.easymotion": true, // \\s等で移動
+  "vim.surround" : true, // S~等で囲える
+
+  // 検索系
+  "vim.ignorecase": true, // 小文字で検索時に大文字小文字を区別しない
+  "vim.smartcase": true, // 大文字を含む検索時に大文字小文字を区別する
+  "vim.incsearch": true, // 文字入力開始時点で検索を開始する
+  "vim.hlsearch": false, // 検索結果をハイライトしない
+
+  "vim.autoindent": true, // 新しい業の時に自動でインデント
+  "vim.history": 5000, // 履歴
+  "vim.useSystemClipboard": true, // クリップボードをデフォルトレジスタとして使用
 
   "vim.normalModeKeyBindings": [
     {
@@ -12,6 +37,14 @@
       "before": ["<Enter>"],
       "after": ["o", "<ESC>"]
 
+    },
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
     },
   ],
   "vim.insertModeKeyBindings": [
