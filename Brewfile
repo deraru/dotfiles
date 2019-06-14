@@ -79,6 +79,7 @@ cask 'skype'
 cask 'visual-studio-code'
 cask 'xquartz'
 
-tap 'caskroom/fonts'
+tap 'homebrew/cask-fonts'
 
 cask 'font-inconsolata-dz-for-powerline'
+cask 'font-myrica'
