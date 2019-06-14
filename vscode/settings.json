@@ -1,11 +1,19 @@
 {
+  "workbench.startupEditor": "none",
+  "editor.fontFamily":"Myrica M",
+  "editor.fontSize": 14,
   "editor.tabSize": 4,
   "editor.wordWrap": true,
+  "editor.roundedSelection": false,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
   "breadcrumbs.enabled": true,
+  "workbench.editor.tabCloseButton": "off",
   "files.trimTrailingWhitespace": true,
 
+  "[ruby]": {
+    "editor.tabSize": 2,
+  },
   "[json]": {
     "editor.tabSize": 2,
   },
@@ -24,7 +32,7 @@
   "vim.incsearch": true, // 文字入力開始時点で検索を開始する
   "vim.hlsearch": false, // 検索結果をハイライトしない
 
-  "vim.autoindent": true, // 新しい業の時に自動でインデント
+  "vim.autoindent": true, // 新しい行の時に自動でインデント
   "vim.history": 5000, // 履歴
   "vim.useSystemClipboard": true, // クリップボードをデフォルトレジスタとして使用
 
