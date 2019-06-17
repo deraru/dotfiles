@@ -44,7 +44,6 @@
     {
       "before": ["<Enter>"],
       "after": ["o", "<ESC>"]
-
     },
     {
       "before": ["j"],
@@ -54,6 +53,14 @@
       "before": ["k"],
       "after": ["g", "k"]
     },
+    {
+      "before": ["<C-h>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<C-l>"],
+      "commands": ["workbench.action.nextEditor"]
+    }
   ],
   "vim.insertModeKeyBindings": [
     {
