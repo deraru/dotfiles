@@ -1,11 +1,16 @@
 [
     {
+        "key": "Ctrl+h",
+        "command": "workbench.view.explorer",
+        "when": "sideBarVisible && editorTextFocus"
+    },
+    {
         "key": "Ctrl+l",
         "command": "workbench.action.focusFirstEditorGroup",
-        "when": "listFocus"
+        "when": "sideBarFocus"
     },
     {
         "key": "\\ n",
         "command": "workbench.action.toggleSidebarVisibility",
-    }
+    },
 ]
