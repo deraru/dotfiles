@@ -2,7 +2,7 @@
     {
         "key": "Ctrl+h",
         "command": "workbench.view.explorer",
-        "when": "sideBarVisible && editorTextFocus"
+        "when": "sideBarVisible"
     },
     {
         "key": "Ctrl+l",
@@ -11,6 +11,6 @@
     },
     {
         "key": "\\ n",
-        "command": "workbench.action.toggleSidebarVisibility",
-    },
+        "command": "workbench.action.toggleSidebarVisibility"
+    }
 ]

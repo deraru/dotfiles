@@ -12,13 +12,13 @@
   "files.trimTrailingWhitespace": true,
 
   "[ruby]": {
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   "[json]": {
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   "[markdown]": {
-    "files.trimTrailingWhitespace": false,
+    "files.trimTrailingWhitespace": false
   },
 
   // プラグイン
@@ -82,12 +82,12 @@
     {
       "before": ["<C-l>"],
       "after": ["<Right>"]
-    },
+    }
   ],
   "vim.visualModeKeyBindings": [
     {
       "before": ["v", "v"],
       "after": ["$", "h"]
-    },
+    }
   ]
 }
