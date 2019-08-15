@@ -2,7 +2,6 @@ brew 'openssl'
 brew 'readline'
 
 brew 'cmake'
-brew 'gradle'
 
 brew 'elixir-build'
 brew 'erlang'
@@ -22,7 +21,6 @@ brew 'fontforge'
 brew 'fswatch'
 brew 'gnu-sed'
 brew 'graphviz'
-brew 'heroku'
 brew 'hub'
 brew 'httping'
 brew 'jq'
@@ -37,7 +35,7 @@ brew 'the_silver_searcher'
 brew 'tig'
 brew 'tree'
 brew 'unison'
-brew 'vim', args: ['with-lua', 'with-python3']
+brew 'vim'
 brew 'wget'
 brew 'watchman'
 
@@ -45,12 +43,14 @@ mas 'Alfred',     id: 405843582
 mas 'feedly',     id: 865500966
 mas 'Fotor',      id: 503039729
 mas 'Keynote',    id: 409183694
-mas 'OneNote',    id: 784801555
-mas 'Opera',      id: 404764921
 mas 'Pixelmator', id: 407963104
 mas 'Slack',      id: 803453959
 mas 'WeChat',     id: 836500024
 mas 'Xcode',      id: 497799835
+
+tap 'heroku/brew'
+
+brew 'heroku'
 
 tap 'caskroom/cask'
 
@@ -67,17 +67,19 @@ cask 'gas-mask'
 cask 'googleappengine'
 cask 'google-chrome'
 cask 'google-cloud-sdk'
-cask 'google-drive'
-cask 'google-japanese-ime'
+cask 'google-backup-and-sync'
 cask 'intellij-idea-ce'
 cask 'java'
 cask 'kindle'
 cask 'licecap'
 cask 'mysqlworkbench'
+cask 'paw'
 cask 'postgres'
 cask 'skype'
 cask 'visual-studio-code'
 cask 'xquartz'
+
+brew 'gradle'
 
 tap 'homebrew/cask-fonts'
 
