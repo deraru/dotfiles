@@ -38,11 +38,11 @@ alias ctags="`brew --prefix`/bin/ctags"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin":$PATH
 
+# nodebrew
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
+
 # rbenv
 eval "$(rbenv init -)"
-
-# yarn
-export PATH="$PATH:`yarn global bin`"
 
 # hub command
 eval "$(hub alias -s)"
