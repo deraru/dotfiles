@@ -64,6 +64,9 @@ export KUBECONFIG="$HOME/.kube/config:$HOME/.kube/config-kyc"
 # Postgres
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
+# MySQL
+export PATH="$PATH:/usr/local/opt/mysql@5.7/bin"
+
 # The next line updates PATH for the Google Cloud SDK.
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 
