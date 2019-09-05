@@ -1,5 +1,6 @@
 brew 'openssl'
 brew 'readline'
+brew 'libmagic'
 
 brew 'cmake'
 
@@ -19,6 +20,7 @@ brew 'ctags'
 brew 'flow'
 brew 'fontforge'
 brew 'fswatch'
+brew 'git-secrets'
 brew 'gnu-sed'
 brew 'graphviz'
 brew 'hub'
