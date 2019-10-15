@@ -41,7 +41,6 @@ brew 'vim'
 brew 'wget'
 brew 'watchman'
 
-mas 'Alfred',     id: 405843582
 mas 'feedly',     id: 865500966
 mas 'Fotor',      id: 503039729
 mas 'Keynote',    id: 409183694
@@ -56,6 +55,7 @@ brew 'heroku'
 
 tap 'caskroom/cask'
 
+cask 'alfred'
 cask 'android-platform-tools'
 cask 'android-ndk'
 cask 'android-sdk'
