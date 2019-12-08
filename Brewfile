@@ -48,6 +48,7 @@ mas 'Keynote',    id: 409183694
 mas 'Pixelmator', id: 407963104
 mas 'Slack',      id: 803453959
 mas 'ToDo',       id: 1274495053
+mas 'Twitter',    id: 1482454543
 mas 'WeChat',     id: 836500024
 mas 'Xcode',      id: 497799835
 
