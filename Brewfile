@@ -42,15 +42,16 @@ brew 'vim'
 brew 'wget'
 brew 'watchman'
 
-mas 'feedly',     id: 865500966
-mas 'Fotor',      id: 503039729
-mas 'Keynote',    id: 409183694
-mas 'Pixelmator', id: 407963104
-mas 'Slack',      id: 803453959
-mas 'ToDo',       id: 1274495053
-mas 'Twitter',    id: 1482454543
-mas 'WeChat',     id: 836500024
-mas 'Xcode',      id: 497799835
+mas 'feedly',            id: 865500966
+mas 'Fotor',             id: 503039729
+mas 'Keynote',           id: 409183694
+mas 'Microsoft OneNote', id: 784801555
+mas 'Pixelmator',        id: 407963104
+mas 'Slack',             id: 803453959
+mas 'ToDo',              id: 1274495053
+mas 'Twitter',           id: 1482454543
+mas 'WeChat',            id: 836500024
+mas 'Xcode',             id: 497799835
 
 tap 'heroku/brew'
 
