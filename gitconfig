@@ -4,9 +4,9 @@
 [alias]
     a   = add
     b   = branch -a
-    co  = checkout
-    com = checkout master
-    cod = checkout develop
+    sw  = switch
+    swm = switch master
+    swd = switch develop
     cm  = commit -m
     dif = diff --color-words
     l   = log --graph --decorate --date=iso --pretty='%ad%C(auto) %h%d %Cgreen%an%Creset %s'
