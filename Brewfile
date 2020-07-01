@@ -31,6 +31,7 @@ brew 'mas'
 brew 'mysql'
 brew 'packer'
 brew 'peco'
+brew 'qt'
 brew 'telnet'
 brew 'terminal-notifier'
 brew 'terraform'
@@ -57,7 +58,7 @@ tap 'heroku/brew'
 
 brew 'heroku'
 
-tap 'caskroom/cask'
+tap 'homebrew/cask'
 
 cask 'alfred'
 cask 'android-platform-tools'
