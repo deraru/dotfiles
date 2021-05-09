@@ -18,6 +18,8 @@
     tool = vimdiff
 [merge]
     tool = vimdiff
+[commit]
+    template = .git_commit_template
 [core]
     editor = vim
     pager = lv -c
@@ -36,3 +38,5 @@
     clean = git-lfs clean %f
     smudge = git-lfs smudge %f
     required = true
+[pull]
+    rebase = false
