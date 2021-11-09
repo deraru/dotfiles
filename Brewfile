@@ -87,7 +87,6 @@ cask 'paw'
 cask 'postgres'
 cask 'postman'
 cask 'skype'
-cask 'virtualbox'
 cask 'visual-studio-code'
 cask 'xquartz'
 
