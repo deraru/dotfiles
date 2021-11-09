@@ -1,0 +1,35 @@
+{
+  "breadcrumbs.enabled": true,
+  "editor.fontFamily":"Myrica M",
+  "editor.fontSize": 14,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.roundedSelection": true,
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  "files.trimTrailingWhitespace": true,
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.startupEditor": "none",
+
+  "[javascript]": {
+    "editor.tabSize": 2,
+  },
+  "[json]": {
+    "editor.tabSize": 2,
+  },
+  "[jsonc]": {
+    "editor.tabSize": 2,
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false,
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+  },
+  "[ruby]": {
+    "editor.tabSize": 2,
+  },
+  "[scss]": {
+    "editor.tabSize": 2,
+  }
+}

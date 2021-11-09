@@ -7,8 +7,7 @@ mkdir ~/.bundle
 ln -s $DOTFILES_ROOT/bundle/config ~/.bundle/config
 
 mkdir ~/.vscode
-ln -s $DOTFILES_ROOT/vscode/settings.json ~/.vscode/settings.json
-ln -s $DOTFILES_ROOT/vscode/keybindings.json ~/.vscode/keybindings.json
+ln -s $DOTFILES_ROOT/Code/settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 ln -s $DOTFILES_ROOT/ctags ~/.ctags
 ln -s $DOTFILES_ROOT/digrc ~/.digrc
