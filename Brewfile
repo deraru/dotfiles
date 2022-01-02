@@ -22,6 +22,7 @@ brew 'flow'
 brew 'fontforge'
 brew 'fswatch'
 brew 'git-secrets'
+brew 'gh'
 brew 'gnu-sed'
 brew 'gpg'
 brew 'graphviz'
@@ -88,6 +89,9 @@ cask 'postman'
 cask 'skype'
 cask 'visual-studio-code'
 cask 'xquartz'
+
+tap 'microsoft/git'
+cask 'git-credential-manager-core'
 
 brew 'gradle'
 

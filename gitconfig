@@ -34,9 +34,13 @@
     protocol = https
 [credential]
     helper = osxkeychain
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager-core
 [filter "lfs"]
     clean = git-lfs clean %f
     smudge = git-lfs smudge %f
     required = true
 [pull]
     rebase = false
+[credential "https://dev.azure.com"]
+	useHttpPath = true
