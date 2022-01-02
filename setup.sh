@@ -20,3 +20,10 @@ ln -s $DOTFILES_ROOT/irbrc ~/.irbrc
 ln -s $DOTFILES_ROOT/my.cnf ~/.my.cnf
 ln -s $DOTFILES_ROOT/pryrc ~/.pryrc
 ln -s $DOTFILES_ROOT/tmux.conf ~/.tmux.conf
+ln -s $DOTFILES_ROOT/vimrc ~/.vimrc
+unlink ~/.zpreztorc
+ln -s $DOTFILES_ROOT/zpreztorc ~/.zpreztorc
+unlink ~/.zshrc
+ln -s $DOTFILES_ROOT/zshrc ~/.zshrc
+unlink ~/.zshenv
+ln -s $DOTFILES_ROOT/zshenv  ~/.zshenv

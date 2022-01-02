@@ -4,62 +4,66 @@ if 0 | endif
 set encoding=utf-8
 scriptencoding utf-8
 
-if has('vim_starting')
-    if &compatible
-        set nocompatible
-    endif
-    set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim/
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
 endif
 
-if dein#load_state('~/.vim/bundles')
-    call dein#begin('~/.vim/bundles')
+" Required:
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-    call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
+" Required:
+call dein#begin('~/.cache/dein')
 
-    call dein#add('vim-scripts/wombat256.vim') " カラースキーマ
-    call dein#add('itchyny/lightline.vim') " Statusline表示
-    call dein#add('Yggdroot/indentLine') " インデント可視化
-    call dein#add('Shougo/vimproc.vim', {'build' : 'make'}) " コマンドの非同期実行。使われてる
-    call dein#add('tpope/vim-fugitive') " :G~ でGitコマンド。使われてる
-    call dein#add('tpope/vim-surround') " テキストを選んで S~ で括弧とかつけてくれる。使う
-    call dein#add('Raimondi/delimitMate') " 自動で閉じ括弧とかつけてくれる。使う
-    call dein#add('tpope/vim-endwise.git') " 自動でendとかつけてくれる。使う
-    call dein#add('gabesoft/vim-ags') " :Ags で検索。使う
-    call dein#add('LeafCage/yankround.vim') " コピペの履歴たどれる。使う
-    call dein#add('ctrlpvim/ctrlp.vim') " ファイル検索。使う
-    call dein#add('scrooloose/nerdtree') " エクスプローラ。使う
-    call dein#add('vim-scripts/Align') " :Align でテキスト整形。あまり使わない
+" Let dein manage dein
+" Required:
+call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-    " HTML, CSS. JavaScript
-    call dein#add('othree/html5.vim')
-    call dein#add('mattn/emmet-vim')
-    call dein#add('pangloss/vim-javascript')
-    call dein#add('jelera/vim-javascript-syntax')
-    call dein#add('othree/javascript-libraries-syntax.vim')
-    " TypeScript
-    call dein#add('leafgarland/typescript-vim')
-    " Vue.js
-    call dein#add('posva/vim-vue')
+" Add or remove your plugins here like this:
+call dein#add('vim-scripts/wombat256.vim') " カラースキーマ
+call dein#add('itchyny/lightline.vim') " Statusline表示
+call dein#add('Yggdroot/indentLine') " インデント可視化
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'}) " コマンドの非同期実行。使われてる
+call dein#add('tpope/vim-fugitive') " :G~ でGitコマンド。使われてる
+call dein#add('tpope/vim-surround') " テキストを選んで S~ で括弧とかつけてくれる。使う
+call dein#add('Raimondi/delimitMate') " 自動で閉じ括弧とかつけてくれる。使う
+call dein#add('tpope/vim-endwise.git') " 自動でendとかつけてくれる。使う
+call dein#add('gabesoft/vim-ags') " :Ags で検索。使う
+call dein#add('LeafCage/yankround.vim') " コピペの履歴たどれる。使う
+call dein#add('ctrlpvim/ctrlp.vim') " ファイル検索。使う
+call dein#add('scrooloose/nerdtree') " エクスプローラ。使う
+call dein#add('vim-scripts/Align') " :Align でテキスト整形。あまり使わない
 
-    " Ruby, Rails
-    call dein#add('vim-ruby/vim-ruby')
-    call dein#add('tpope/vim-rails.git')
-    call dein#add('slim-template/vim-slim.git')
-    call dein#add('vim-scripts/dbext.vim')
+" HTML, CSS. JavaScript
+call dein#add('othree/html5.vim')
+call dein#add('mattn/emmet-vim')
+call dein#add('pangloss/vim-javascript')
+call dein#add('jelera/vim-javascript-syntax')
+call dein#add('othree/javascript-libraries-syntax.vim')
+" TypeScript
+call dein#add('leafgarland/typescript-vim')
+" Vue.js
+call dein#add('posva/vim-vue')
 
-    " Elixir
-    call dein#add('elixir-lang/vim-elixir')
+" Ruby, Rails
+call dein#add('vim-ruby/vim-ruby')
+call dein#add('tpope/vim-rails.git')
+call dein#add('slim-template/vim-slim.git')
+call dein#add('vim-scripts/dbext.vim')
 
-    " Go
-    call dein#add('fatih/vim-go')
+" Elixir
+call dein#add('elixir-lang/vim-elixir')
 
-    " Terraform
-    call dein#add('vim-scripts/vim-terraform')
+" Go
+call dein#add('fatih/vim-go')
 
-    call dein#end()
-    call dein#save_state()
-endif
+" Terraform
+call dein#add('vim-scripts/vim-terraform')
 
+" Required:
+call dein#end()
+
+" Required:
 filetype plugin indent on " ファイルタイプ自動検出有効、ファイルタイプ変更時のファイルタイププラグイン自動読み込み有効、ファイルタイプ変更時のインデント設定自動読み込み有効
 syntax enable "カラー強調
 
@@ -67,6 +71,8 @@ syntax enable "カラー強調
 "if dein#check_install()
 "  call dein#install()
 "endif
+
+"End dein Scripts-------------------------
 
 " 色の設定
 colorscheme wombat256mod
