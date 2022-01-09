@@ -6,9 +6,16 @@ DOTFILES_ROOT=$(pwd)
 mkdir ~/.bundle
 ln -s $DOTFILES_ROOT/bundle/config ~/.bundle/config
 
-mkdir ~/.vscode
 ln -s $DOTFILES_ROOT/Code/settings.json ~/Library/Application\ Support/Code/User/settings.json
 
+mkdir ~/.vim
+mkdir -p ~/var/vim/undo
+unlink ~/.vim/ftdetect
+ln -s $DOTFILES_ROOT/vim/ftdetect ~/.vim/ftdetect
+unlink ~/.vim/ftplugin
+ln -s $DOTFILES_ROOT/vim/ftplugin ~/.vim/ftplugin
+
+ln -s $DOTFILES_ROOT/agignore ~/.agignore
 ln -s $DOTFILES_ROOT/ctags ~/.ctags
 ln -s $DOTFILES_ROOT/digrc ~/.digrc
 ln -s $DOTFILES_ROOT/gemrc ~/.gemrc
