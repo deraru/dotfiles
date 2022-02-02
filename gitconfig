@@ -5,13 +5,12 @@
     a   = add
     b   = branch -a
     sw  = switch
-    swm = switch master
+    swm = switch main
     swd = switch develop
     cm  = commit -m
     dif = diff --color-words
     l   = log --graph --decorate --date=iso --pretty='%ad%C(auto) %h%d %Cgreen%an%Creset %s'
     pp  = pull --prune
-    pr  = pull-request
     rh  = reset HEAD
     st  = status --untracked-files=all --short --branch
 [diff]
@@ -30,17 +29,13 @@
     ui = auto
 [push]
     default = simple
-[hub]
-    protocol = https
+[pull]
+    rebase = false
 [credential]
-    helper = osxkeychain
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager-core
+    helper = /usr/local/share/gcm-core/git-credential-manager-core
+[credential "https://dev.azure.com"]
+    useHttpPath = true
 [filter "lfs"]
     clean = git-lfs clean %f
     smudge = git-lfs smudge %f
     required = true
-[pull]
-    rebase = false
-[credential "https://dev.azure.com"]
-	useHttpPath = true

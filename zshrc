@@ -44,9 +44,6 @@ export PATH="$HOME/.nodebrew/current/bin:$PATH"
 # rbenv
 eval "$(rbenv init -)"
 
-# hub command
-eval "$(hub alias -s)"
-
 # Locale
 export LC_CTYPE="ja_JP.UTF-8"
 
