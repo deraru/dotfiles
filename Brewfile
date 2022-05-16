@@ -56,6 +56,10 @@ mas 'Twitter',           id: 1482454543
 mas 'WeChat',            id: 836500024
 mas 'Xcode',             id: 497799835
 
+tap 'cesanta/mos'
+
+brew 'mos'
+
 tap 'heroku/brew'
 
 brew 'heroku'
