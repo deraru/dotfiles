@@ -1,68 +1,17 @@
 {
-  "workbench.startupEditor": "none",
+  "breadcrumbs.enabled": true,
   "editor.fontFamily":"Myrica M",
   "editor.fontSize": 14,
-  "editor.tabSize": 4,
-  "editor.wordWrap": true,
-  "editor.roundedSelection": false,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
-  "breadcrumbs.enabled": true,
-  "workbench.editor.tabCloseButton": "off",
+  "editor.roundedSelection": true,
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.startupEditor": "none",
 
-  "[ruby]": {
-    "editor.tabSize": 2
-  },
-  "[json]": {
-    "editor.tabSize": 2
-  },
-  "[markdown]": {
-    "files.trimTrailingWhitespace": false
-  },
-
-  // プラグイン
-  "vim.camelCaseMotion.enable": true, // \w等で区切り移動
-  "vim.easymotion": true, // \\s等で移動
-  "vim.surround" : true, // S~等で囲える
-
-  // 検索系
-  "vim.ignorecase": true, // 小文字で検索時に大文字小文字を区別しない
-  "vim.smartcase": true, // 大文字を含む検索時に大文字小文字を区別する
-  "vim.incsearch": true, // 文字入力開始時点で検索を開始する
-  "vim.hlsearch": false, // 検索結果をハイライトしない
-
-  "vim.autoindent": true, // 新しい行の時に自動でインデント
-  "vim.history": 5000, // 履歴
-  "vim.useSystemClipboard": true, // クリップボードをデフォルトレジスタとして使用
-
-  "vim.normalModeKeyBindings": [
-    {
-      "before": [";"],
-      "after": [":"]
-    },
-    {
-      "before": ["<Enter>"],
-      "after": ["o", "<ESC>"]
-    },
-    {
-      "before": ["j"],
-      "after": ["g", "j"]
-    },
-    {
-      "before": ["k"],
-      "after": ["g", "k"]
-    },
-    {
-      "before": ["<C-h>"],
-      "commands": ["workbench.action.previousEditor"]
-    },
-    {
-      "before": ["<C-l>"],
-      "commands": ["workbench.action.nextEditor"]
-    }
-  ],
-  "vim.insertModeKeyBindings": [
+  "vim.insertModeKeyBindingsNonRecursive": [
     {
       "before": ["j", "j"],
       "after": ["<ESC>"]
@@ -84,10 +33,59 @@
       "after": ["<Right>"]
     }
   ],
-  "vim.visualModeKeyBindings": [
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [";"],
+      "after": [":"]
+    },
+    {
+      "before": ["<Enter>"],
+      "after": ["o", "<ESC>"]
+    },
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
+      "before" : ["u"],
+      "commands" : ["undo"]
+    },
+    {
+      "before" : ["<C-r>"],
+      "commands" : ["redo"]
+    },
+  ],
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["v", "v"],
       "after": ["$", "h"]
     }
-  ]
+  ],
+
+  "[javascript]": {
+    "editor.tabSize": 2,
+  },
+  "[json]": {
+    "editor.tabSize": 2,
+  },
+  "[jsonc]": {
+    "editor.tabSize": 2,
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false,
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+  },
+  "[ruby]": {
+    "editor.tabSize": 2,
+  },
+  "[scss]": {
+    "editor.tabSize": 2,
+  }
 }

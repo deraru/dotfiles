@@ -11,6 +11,62 @@
   "workbench.editor.tabCloseButton": "off",
   "workbench.startupEditor": "none",
 
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "j"],
+      "after": ["<ESC>"]
+    },
+    {
+      "before": ["<C-h>"],
+      "after": ["<Left>"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<Down>"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<Up>"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<Right>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [";"],
+      "after": [":"]
+    },
+    {
+      "before": ["<Enter>"],
+      "after": ["o", "<ESC>"]
+    },
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
+      "before" : ["u"],
+      "commands" : ["undo"]
+    },
+    {
+      "before" : ["<C-r>"],
+      "commands" : ["redo"]
+    },
+  ],
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["v", "v"],
+      "after": ["$", "h"]
+    }
+  ],
+
   "[javascript]": {
     "editor.tabSize": 2,
   },
