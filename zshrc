@@ -38,12 +38,6 @@ alias ctags="`brew --prefix`/bin/ctags"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin":$PATH
 
-# nodebrew
-export PATH="$HOME/.nodebrew/current/bin:$PATH"
-
-# rbenv
-eval "$(rbenv init -)"
-
 # Locale
 export LC_CTYPE="ja_JP.UTF-8"
 

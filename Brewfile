@@ -4,17 +4,12 @@ brew 'libmagic'
 
 brew 'cmake'
 
-brew 'elixir-build'
-brew 'erlang'
-brew 'exenv'
+brew 'asdf'
+
 brew 'go'
 brew 'gcc'
 brew 'lua'
-brew 'nodebrew'
-brew 'rbenv'
-brew 'ruby-build'
 
-brew 'asdf'
 brew 'awscli'
 brew 'awsebcli'
 brew 'ctags'
