@@ -31,6 +31,7 @@ ln -s $DOTFILES_ROOT/gitignore_global ~/.gitignore_global
 ln -s $DOTFILES_ROOT/irbrc ~/.irbrc
 ln -s $DOTFILES_ROOT/my.cnf ~/.my.cnf
 ln -s $DOTFILES_ROOT/pryrc ~/.pryrc
+ln -s $DOTFILES_ROOT/tool-versions ~/.tool-versions
 ln -s $DOTFILES_ROOT/tmux.conf ~/.tmux.conf
 unlink ~/.zpreztorc
 ln -s $DOTFILES_ROOT/zpreztorc ~/.zpreztorc
