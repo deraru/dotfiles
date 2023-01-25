@@ -87,5 +87,12 @@
   },
   "[scss]": {
     "editor.tabSize": 2,
+  },
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
   }
 }
