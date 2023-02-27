@@ -69,3 +69,6 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias diff="diff -u"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
