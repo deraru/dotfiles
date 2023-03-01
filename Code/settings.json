@@ -6,6 +6,15 @@
   "editor.renderWhitespace": "all",
   "editor.roundedSelection": true,
   "editor.wordWrap": "on",
+
+  },
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  "explorer.autoReveal": false,
   "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
   "workbench.editor.tabCloseButton": "off",
@@ -87,12 +96,5 @@
   },
   "[scss]": {
     "editor.tabSize": 2,
-  },
-  "editor.inlineSuggest.enabled": true,
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
-    "plaintext": false,
-    "markdown": false
   }
 }

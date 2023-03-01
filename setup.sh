@@ -8,6 +8,7 @@ ln -s $DOTFILES_ROOT/bundle/config ~/.bundle/config
 
 # VSCode
 ln -s $DOTFILES_ROOT/Code/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s $DOTFILES_ROOT/Code/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 
