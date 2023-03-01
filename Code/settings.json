@@ -2,21 +2,20 @@
   "breadcrumbs.enabled": true,
   "editor.fontFamily":"Myrica M",
   "editor.fontSize": 14,
+  "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
   "editor.roundedSelection": true,
   "editor.wordWrap": "on",
-
-  },
-  "editor.inlineSuggest.enabled": true,
+  "explorer.autoReveal": false,
+  "files.autoSave": "afterDelay",
+  "files.trimTrailingWhitespace": true,
   "github.copilot.enable": {
     "*": true,
     "yaml": false,
     "plaintext": false,
     "markdown": false
-  "explorer.autoReveal": false,
-  "files.autoSave": "afterDelay",
-  "files.trimTrailingWhitespace": true,
+  },
   "workbench.editor.tabCloseButton": "off",
   "workbench.startupEditor": "none",
 
@@ -66,7 +65,7 @@
     {
       "before" : ["<C-r>"],
       "commands" : ["redo"]
-    },
+    }
   ],
   "vim.useSystemClipboard": true,
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -77,24 +76,24 @@
   ],
 
   "[javascript]": {
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   "[json]": {
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   "[jsonc]": {
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   "[markdown]": {
-    "files.trimTrailingWhitespace": false,
+    "files.trimTrailingWhitespace": false
   },
   "[typescript]": {
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   "[ruby]": {
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   "[scss]": {
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   }
 }
