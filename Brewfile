@@ -104,3 +104,6 @@ cask 'font-myrica'
 tap 'versent/homebrew-taps'
 
 brew 'saml2aws'
+
+tap 'fujiwara/tap'
+brew 'tracer'
