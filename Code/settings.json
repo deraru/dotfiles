@@ -9,6 +9,7 @@
   "editor.wordWrap": "on",
   "explorer.autoReveal": false,
   "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "github.copilot.enable": {
     "*": true,
