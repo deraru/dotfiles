@@ -60,8 +60,6 @@ tap 'heroku/brew'
 
 brew 'heroku'
 
-tap 'homebrew/cask'
-
 cask 'alfred'
 cask 'android-platform-tools'
 cask 'android-ndk'
