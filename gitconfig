@@ -8,7 +8,7 @@
     swm = switch main
     swd = switch develop
     cm  = commit -m
-    dif = diff --color-words
+    dif = diff --color-words=[^\\x80-\\xbf][\\x80-\\xbf]*
     l   = log --graph --decorate --date=iso --pretty='%ad%C(auto) %h%d %Cgreen%an%Creset %s'
     pp  = pull --prune
     rh  = reset HEAD
