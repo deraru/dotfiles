@@ -17,7 +17,9 @@
     "plaintext": false,
     "markdown": false
   },
-  "workbench.editor.tabCloseButton": "off",
+  "terminal.integrated.fontSize": 14,
+  "update.showReleaseNotes": false,
+  "workbench.editor.tabActionCloseVisibility": false,
   "workbench.startupEditor": "none",
 
   "vim.insertModeKeyBindingsNonRecursive": [
