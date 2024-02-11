@@ -34,6 +34,9 @@ bindkey "^s" history-incremental-search-forward
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
+export EDITOR=vim
+export VISUAL=vim
+
 # go
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin":$PATH
