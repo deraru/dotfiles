@@ -79,6 +79,7 @@ cask 'dropbox'
 cask 'firefox'
 cask 'fluid'
 cask 'gas-mask'
+cask 'git-credential-manager'
 cask 'googleappengine'
 cask 'google-chrome'
 cask 'google-cloud-sdk'
@@ -96,9 +97,6 @@ cask 'session-manager-plugin'
 cask 'skype'
 cask 'visual-studio-code'
 cask 'xquartz'
-
-tap 'microsoft/git'
-cask 'git-credential-manager-core'
 
 brew 'gradle'
 
