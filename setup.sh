@@ -38,3 +38,8 @@ unlink ~/.zshrc
 ln -s $DOTFILES_ROOT/zshrc ~/.zshrc
 unlink ~/.zshenv
 ln -s $DOTFILES_ROOT/zshenv  ~/.zshenv
+
+# Claude Code
+mkdir -p ~/.claude
+unlink ~/.claude/settings.json
+ln -s $DOTFILES_ROOT/claude/settings.json ~/.claude/settings.json

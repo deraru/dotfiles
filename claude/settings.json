@@ -1,0 +1,44 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(node --version)",
+      "Bash(node -v)",
+      "Bash(pnpm --version)",
+      "Bash(pnpm -v)",
+      "Bash(npm --version)",
+      "Bash(git --version)",
+      "Bash(pwd)",
+      "Bash(which:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(cp:*)",
+      "Bash(find .:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:nodejs.org)",
+      "WebFetch(domain:react.dev)",
+      "WebFetch(domain:typescriptlang.org)",
+      "WebFetch(domain:cloudflare.com)",
+      "WebFetch(domain:pnpm.io)",
+      "WebFetch(domain:reactrouter.com)",
+      "WebFetch(domain:tailwindcss.com)",
+      "WebFetch(domain:vitejs.dev)",
+      "WebSearch",
+      "mcp__chrome-devtools__*",
+      "mcp__codex__*",
+      "mcp__context7__*",
+      "mcp__kiri__*"
+    ]
+  }
+}
