@@ -1,21 +1,19 @@
 brew 'openssl'
 brew 'readline'
 brew 'libmagic'
+brew 'libpq'
 
 brew 'cmake'
 
 brew 'asdf'
 
-brew 'go'
 brew 'gcc'
 brew 'lua'
 
 brew 'atlas'
 brew 'awscli'
-brew 'awsebcli'
 brew 'chrome-devtools-mcp'
 brew 'cloud-sql-proxy'
-brew 'context7-mcp'
 brew 'coreutils'
 brew 'ctags'
 brew 'direnv'
@@ -36,7 +34,6 @@ brew 'mas'
 brew 'mecab'
 brew 'mecab-ipadic'
 brew 'mysql'
-brew 'nodenv'
 brew 'openapi-generator'
 brew 'packer'
 brew 'peco'
@@ -45,25 +42,20 @@ brew 'qt'
 brew 'stripe-cli'
 brew 'telnet'
 brew 'terminal-notifier'
-brew 'terraform'
 brew 'the_silver_searcher'
 brew 'tig'
 brew 'tmux'
 brew 'tree'
+brew 'typescript-language-server'
 brew 'unison'
 brew 'uv'
 brew 'vim'
 brew 'wget'
 brew 'watchman'
 
-mas 'feedly',            id: 865500966
 mas 'Fotor',             id: 503039729
 mas 'Keynote',           id: 409183694
-mas 'Microsoft OneNote', id: 784801555
-mas 'Pixelmator',        id: 407963104
 mas 'Slack',             id: 803453959
-mas 'ToDo',              id: 1274495053
-mas 'Twitter',           id: 1482454543
 mas 'WeChat',            id: 836500024
 mas 'Xcode',             id: 497799835
 
@@ -75,38 +67,34 @@ tap 'heroku/brew'
 
 brew 'heroku'
 
-cask 'alfred'
 cask 'android-platform-tools'
 cask 'android-ndk'
-cask 'android-sdk'
 cask 'android-studio'
 cask 'arduino'
-cask 'atom'
 cask 'chromedriver'
+cask 'claude'
 cask 'claude-code'
 cask 'codex'
+cask 'codex-app'
 cask 'cursor'
 cask 'docker-desktop'
 cask 'dropbox'
+cask 'figma'
 cask 'firefox'
 cask 'fluid'
 cask 'gas-mask'
-cask 'googleappengine'
 cask 'google-chrome'
 cask 'gcloud-cli'
 cask 'google-drive'
-cask 'intellij-idea-ce'
 cask 'kindle'
 cask 'licecap'
 cask 'mysqlworkbench'
 cask 'ngrok'
-cask 'notion'
 cask 'rapidapi'
-cask 'postgres-unofficial'
 cask 'postman'
 cask 'session-manager-plugin'
-cask 'skype'
 cask 'visual-studio-code'
+cask 'windows-app'
 cask 'xquartz'
 
 brew 'gradle'
