@@ -20,6 +20,11 @@ ln -s $DOTFILES_ROOT/vim/ftplugin ~/.vim/ftplugin
 ln -s $DOTFILES_ROOT/gvimrc ~/.gvimrc
 ln -s $DOTFILES_ROOT/vimrc ~/.vimrc
 
+# Ghostty
+mkdir -p ~/.config/ghostty
+unlink ~/.config/ghostty/config.ghostty
+ln -s $DOTFILES_ROOT/ghostty ~/.config/ghostty/config.ghostty
+
 ln -s $DOTFILES_ROOT/agignore ~/.agignore
 ln -s $DOTFILES_ROOT/ctags ~/.ctags
 ln -s $DOTFILES_ROOT/digrc ~/.digrc
@@ -41,5 +46,21 @@ ln -s $DOTFILES_ROOT/zshenv  ~/.zshenv
 
 # Claude Code
 mkdir -p ~/.claude
+mkdir -p ~/.claude/hooks
 unlink ~/.claude/settings.json
 ln -s $DOTFILES_ROOT/claude/settings.json ~/.claude/settings.json
+unlink ~/.claude/CLAUDE.md
+ln -s $DOTFILES_ROOT/claude/CLAUDE.md ~/.claude/CLAUDE.md
+unlink ~/.claude/hooks/block-loop-commands.sh
+ln -s $DOTFILES_ROOT/claude/hooks/block-loop-commands.sh ~/.claude/hooks/block-loop-commands.sh
+unlink ~/.claude/hooks/setup-worktree.sh
+ln -s $DOTFILES_ROOT/claude/hooks/setup-worktree.sh ~/.claude/hooks/setup-worktree.sh
+ln -s $DOTFILES_ROOT/codex/AGENTS.md ~/AGENTS.md
+
+# Codex
+mkdir -p ~/.codex
+mkdir -p ~/.codex/rules
+unlink ~/.codex/config.toml
+ln -s $DOTFILES_ROOT/codex/config.toml ~/.codex/config.toml
+unlink ~/.codex/rules/default.rules
+ln -s $DOTFILES_ROOT/codex/rules/default.rules ~/.codex/rules/default.rules
