@@ -1,6 +1,7 @@
 theme = Wombat
 font-family = Myrica M
 font-thicken = true
+alpha-blending = linear
 font-size = 15
 adjust-cell-height = 90%
 copy-on-select = clipboard
