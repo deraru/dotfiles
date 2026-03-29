@@ -1,15 +1,3 @@
-# zsh history
-export HISTFILE=$HOME/.zsh_history
-export HISTSIZE=5000000
-export SAVEHIST=5000000
-setopt share_history
-setopt append_history
-setopt extended_history
-setopt inc_append_history
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
-setopt hist_expand
-
 export EDITOR=vim
 export VISUAL=vim
 
@@ -31,9 +19,6 @@ export PATH="$ASDF_DATA_DIR/shims:$PATH"
 # MySQL client
 export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
 
-# direnv
-eval "$(direnv hook zsh)"
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -44,13 +29,27 @@ export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
 # --- AI agent early return ---
 if [[ -n "$CLAUDECODE" || -n "$CODEX_SANDBOX" ]]; then
+  export PAGER=cat
   export GIT_PAGER=cat
   export GH_PAGER=cat
   export NO_COLOR=1
+  export GIT_TERMINAL_PROMPT=0
+  export GH_PROMPT_DISABLED=1
   return
 fi
 
 # --- Human-only settings below ---
+
+# zsh history
+export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=5000000
+export SAVEHIST=5000000
+setopt share_history
+setopt append_history
+setopt extended_history
+setopt inc_append_history
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
 
 # Completion
 autoload -Uz compinit && compinit
@@ -64,6 +63,9 @@ bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 bindkey "^r" history-incremental-search-backward
 bindkey "^s" history-incremental-search-forward
+
+# direnv
+eval "$(direnv hook zsh)"
 
 # Alias
 alias ls="ls -G"
