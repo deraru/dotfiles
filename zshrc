@@ -6,6 +6,8 @@ if [[ -n "$CLAUDECODE" || -n "$CODEX_SANDBOX" || -n "$CODEX_CI" ]]; then
   export NO_COLOR=1
   export GIT_TERMINAL_PROMPT=0
   export GH_PROMPT_DISABLED=1
+  export AWS_PAGER=""
+  export CLOUDSDK_CORE_DISABLE_PROMPTS=1
   return
 fi
 
