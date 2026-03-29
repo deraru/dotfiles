@@ -1,7 +1,8 @@
 theme = Wombat
-font-family = Myrica M
+font-family = Inconsolata Nerd Font
+font-family = Hiragino Sans
 font-thicken = true
 alpha-blending = linear
-font-size = 15
-adjust-cell-height = 90%
+font-size = 14
+adjust-cell-height = 20%
 copy-on-select = clipboard
