@@ -52,6 +52,10 @@ fi
 
 # --- Human-only settings below ---
 
+# Completion
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # History search keybindings
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
