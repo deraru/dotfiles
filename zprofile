@@ -24,7 +24,6 @@ export LC_CTYPE="ja_JP.UTF-8"
 export ASDF_DATA_DIR="$HOME/.asdf"
 
 path=(
-  $HOME/.antigravity/antigravity/bin
   $ASDF_DATA_DIR/shims
   /opt/homebrew/opt/libpq/bin(N)
   /opt/homebrew/opt/mysql-client@8.0/bin
@@ -38,6 +37,7 @@ if [[ -n "$CLAUDECODE" || -n "$CODEX_SANDBOX" || -n "$CODEX_CI" ]]; then
 fi
 
 # --- Human-only (login) settings below ---
+path=($HOME/.antigravity/antigravity/bin $path)
 export BROWSER='open'
 export LESS='-g -i -M -R -S -w -X -z-4'
 if (( $#commands[(i)lesspipe(|.sh)] )); then
