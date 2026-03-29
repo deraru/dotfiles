@@ -65,9 +65,14 @@ bindkey "^n" history-beginning-search-forward-end
 bindkey "^r" history-incremental-search-backward
 bindkey "^s" history-incremental-search-forward
 
-# Applications Alias
+# Alias
+alias ls="ls -G"
+alias ll="ls -la"
+alias la="ls -A"
+alias mkdir="mkdir -p"
+alias grep="grep --color=auto"
+alias diff="diff -u --color=auto"
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-alias diff="diff -u"
 
 # gcloud completion
 if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc'; fi
