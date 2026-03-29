@@ -15,10 +15,8 @@ brew 'awscli'
 brew 'chrome-devtools-mcp'
 brew 'cloud-sql-proxy'
 brew 'coreutils'
-brew 'ctags'
 brew 'direnv'
 brew 'flow'
-brew 'flyctl'
 brew 'fontforge'
 brew 'fswatch'
 brew 'gh'
@@ -60,11 +58,9 @@ mas 'WeChat',            id: 836500024
 mas 'Xcode',             id: 497799835
 
 tap 'cesanta/mos'
-
 brew 'mos'
 
 tap 'heroku/brew'
-
 brew 'heroku'
 
 cask 'android-platform-tools'
@@ -81,30 +77,14 @@ cask 'docker-desktop'
 cask 'dropbox'
 cask 'figma'
 cask 'firefox'
-cask 'fluid'
+cask 'font-inconsolata-nerd-font'
 cask 'gas-mask'
 cask 'google-chrome'
 cask 'gcloud-cli'
+cask 'ghostty'
 cask 'google-drive'
 cask 'kindle'
-cask 'licecap'
-cask 'mysqlworkbench'
 cask 'ngrok'
-cask 'rapidapi'
-cask 'postman'
 cask 'session-manager-plugin'
-cask 'visual-studio-code'
 cask 'windows-app'
 cask 'xquartz'
-
-brew 'gradle'
-
-cask 'font-inconsolata-dz-for-powerline'
-cask 'font-myrica'
-
-tap 'versent/homebrew-taps'
-
-brew 'saml2aws'
-
-tap 'fujiwara/tap'
-brew 'tracer'
