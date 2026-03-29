@@ -21,14 +21,11 @@ fi
 export LC_CTYPE="ja_JP.UTF-8"
 
 # PATH
-export GOPATH="$HOME/go"
 export ASDF_DATA_DIR="$HOME/.asdf"
 
 path=(
   $HOME/.antigravity/antigravity/bin
-  $HOME/.local/bin
   $ASDF_DATA_DIR/shims
-  $GOPATH/bin
   /opt/homebrew/opt/libpq/bin(N)
   /opt/homebrew/opt/mysql-client@8.0/bin
   /opt/homebrew/share/google-cloud-sdk/bin
