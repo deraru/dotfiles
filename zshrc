@@ -1,5 +1,5 @@
 # --- AI agent early return ---
-if [[ -n "$CLAUDECODE" || -n "$CODEX_SANDBOX" ]]; then
+if [[ -n "$CLAUDECODE" || -n "$CODEX_SANDBOX" || -n "$CODEX_CI" ]]; then
   export PAGER=cat
   export GIT_PAGER=cat
   export GH_PAGER=cat
