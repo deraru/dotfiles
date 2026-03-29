@@ -17,9 +17,6 @@ bindkey "^n" history-beginning-search-forward-end
 bindkey "^r" history-incremental-search-backward
 bindkey "^s" history-incremental-search-forward
 
-# ctags
-alias ctags="`brew --prefix`/bin/ctags"
-
 export EDITOR=vim
 export VISUAL=vim
 
@@ -30,43 +27,71 @@ export PATH="$GOPATH/bin":$PATH
 # Locale
 export LC_CTYPE="ja_JP.UTF-8"
 
-# Android SDK
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-export PATH="$PATH:$ANDROID_HOME/tools"
-export PATH="$PATH:$ANDROID_HOME/platform-tools"
-
-# heroku toolbelt
-export PATH="$PATH:/usr/local/heroku/bin"
-
-# kubernetes
-export KUBECONFIG="$HOME/.kube/config:$HOME/.kube/config-kyc"
-
-# Postgres
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-
-# MySQL
-export PATH="$PATH:/usr/local/opt/mysql@5.7/bin"
-
-# The next line updates PATH for the Google Cloud SDK.
-source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-
-# The next line enables zsh completion for gcloud.
-source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+# PostgreSQL client (libpq)
+if [ -d "/opt/homebrew/opt/libpq/bin" ]; then
+  export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+fi
 
 # Applications Alias
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias diff="diff -u"
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+export ASDF_DATA_DIR="$HOME/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
-
-# Shopify Hydrogen alias to local projects
-alias h2='$(npm prefix -s)/node_modules/.bin/shopify hydrogen'export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
-export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
+# MySQL client
+export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
 
 # direnv
 eval "$(direnv hook zsh)"
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="$HOME/.local/bin:$PATH"
+
+# Added by Antigravity
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+
+# Context7
+export CONTEXT7_API_KEY=$(security find-generic-password -s "CONTEXT7_API_KEY" -w 2>/dev/null)
+
+# tmux: attach or create session named after current directory
+# t     -> 3 panes (even-vertical)
+# t 6   -> 6 panes (3x2 tiled)
+t() {
+  if [[ -n "$TMUX" ]]; then
+    echo "Already inside tmux" >&2
+    return 1
+  fi
+  if ! git rev-parse --is-inside-work-tree &>/dev/null; then
+    tmux new-session
+    return
+  fi
+  local base=$(basename "$(git rev-parse --show-toplevel)")
+  local name="$base"
+  local i=2
+  while tmux has-session -t "=$name" 2>/dev/null; do
+    name="${base}-${i}"
+    ((i++))
+  done
+  local panes=${1:-3}
+  tmux new-session -d -s "$name"
+  if [[ "$panes" == "6" ]]; then
+    tmux split-window -v -t "$name"
+    tmux split-window -v -t "$name"
+    tmux select-layout -t "$name" even-vertical
+    tmux select-pane -t "$name:0.0" && tmux split-window -h -t "$name"
+    tmux select-pane -t "$name:0.2" && tmux split-window -h -t "$name"
+    tmux select-pane -t "$name:0.4" && tmux split-window -h -t "$name"
+    tmux select-layout -t "$name" tiled
+  else
+    tmux split-window -v -t "$name"
+    tmux split-window -v -t "$name"
+    tmux select-layout -t "$name" even-vertical
+  fi
+  tmux select-pane -t "$name:0.0"
+  tmux attach -t "$name"
+}
