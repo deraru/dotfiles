@@ -37,6 +37,39 @@ bindkey "^n" history-beginning-search-forward-end
 bindkey "^r" history-incremental-search-backward
 bindkey "^s" history-incremental-search-forward
 
+# Prompt (wombat theme)
+autoload -Uz vcs_info
+zstyle ':vcs_info:git:*' formats ' %F{173}%b%f'
+setopt prompt_subst
+
+zmodload zsh/datetime
+_prompt_preexec() { _cmd_start=$EPOCHREALTIME }
+_prompt_precmd() {
+  if [[ -n "$_cmd_start" ]]; then
+    local elapsed=$(( EPOCHREALTIME - _cmd_start ))
+    if (( elapsed >= 60 )); then
+      _cmd_time=" %F{173}$(printf '%dm%ds' $((elapsed/60)) $((elapsed%60)))%f"
+    elif (( elapsed >= 1 )); then
+      _cmd_time=" %F{241}$(printf '%.1fs' $elapsed)%f"
+    else
+      _cmd_time=" %F{241}$(printf '%dms' $((elapsed*1000)))%f"
+    fi
+    unset _cmd_start
+  else
+    _cmd_time=""
+  fi
+  vcs_info
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook preexec _prompt_preexec
+add-zsh-hook precmd _prompt_precmd
+
+PROMPT='%F{241}%D{%Y-%m-%d %H:%M:%S}%f %F{186}%n%f%F{241}@%m%f %F{149}%~%f${vcs_info_msg_0_} %F{149}%#%f '
+RPROMPT='${_cmd_time}'
+
+# LS_COLORS (wombat)
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
 # direnv
 eval "$(direnv hook zsh)"
 
