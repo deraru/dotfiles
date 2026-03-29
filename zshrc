@@ -9,13 +9,6 @@ setopt inc_append_history
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt hist_expand
-autoload history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey "^p" history-beginning-search-backward-end
-bindkey "^n" history-beginning-search-forward-end
-bindkey "^r" history-incremental-search-backward
-bindkey "^s" history-incremental-search-forward
 
 export EDITOR=vim
 export VISUAL=vim
@@ -32,10 +25,6 @@ if [ -d "/opt/homebrew/opt/libpq/bin" ]; then
   export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 fi
 
-# Applications Alias
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-alias diff="diff -u"
-
 export ASDF_DATA_DIR="$HOME/.asdf"
 export PATH="$ASDF_DATA_DIR/shims:$PATH"
 
@@ -48,12 +37,36 @@ eval "$(direnv hook zsh)"
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="$HOME/.local/bin:$PATH"
 
-# Added by Antigravity
+# Antigravity
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+
+# --- AI agent early return ---
+if [[ -n "$CLAUDECODE" || -n "$CODEX_SANDBOX" ]]; then
+  export GIT_PAGER=cat
+  export GH_PAGER=cat
+  export NO_COLOR=1
+  return
+fi
+
+# --- Human-only settings below ---
+
+# History search keybindings
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^p" history-beginning-search-backward-end
+bindkey "^n" history-beginning-search-forward-end
+bindkey "^r" history-incremental-search-backward
+bindkey "^s" history-incremental-search-forward
+
+# Applications Alias
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias diff="diff -u"
+
+# gcloud completion
+if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Context7
 export CONTEXT7_API_KEY=$(security find-generic-password -s "CONTEXT7_API_KEY" -w 2>/dev/null)
