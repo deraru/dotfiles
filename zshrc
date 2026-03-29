@@ -1,32 +1,3 @@
-export EDITOR=vim
-export VISUAL=vim
-
-# go
-export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin":$PATH
-
-# Locale
-export LC_CTYPE="ja_JP.UTF-8"
-
-# PostgreSQL client (libpq)
-if [ -d "/opt/homebrew/opt/libpq/bin" ]; then
-  export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-fi
-
-export ASDF_DATA_DIR="$HOME/.asdf"
-export PATH="$ASDF_DATA_DIR/shims:$PATH"
-
-# MySQL client
-export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
-
-export PATH="$HOME/.local/bin:$PATH"
-
-# Antigravity
-export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
-
 # --- AI agent early return ---
 if [[ -n "$CLAUDECODE" || -n "$CODEX_SANDBOX" ]]; then
   export PAGER=cat
